@@ -1,22 +1,23 @@
 'use client';
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="lg:h-[80px] bg-transparent flex justify-between items-center px-16 text-white">
-      <div className="mt-5">
+    <div className="lg:h-[80px] bg-transparent flex justify-between items-center px-16 text-white z-30">
+      <Link href="/" className="mt-5">
         <Image
           src="/pictures/ahamenesLogo.png"
           alt="logo"
           width={100}
           height={100}
         />
-      </div>
+      </Link>
       <div className="flex gap-8 text-sm">
-        <a href="/events">EVENTS</a>
+        <a href="/event">EVENTS</a>
         <a href="/about_us">ABOUT US</a>
         <a href="/gallery">GALLERY & MEDIA</a>
         <div

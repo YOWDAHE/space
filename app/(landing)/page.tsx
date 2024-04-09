@@ -49,26 +49,51 @@ const TravelSection = () => {
 const RocketSection = () => {
 	return (
 		<div className="h-screen-minus-80 snap-always snap-center relative">
-			<div className="text-[75px] tracking-[20px] mt-8 font-bold text-white">
+			<motion.div
+				initial={{ opacity: "0%" }}
+				animate={{ opacity: "100%" }}
+				transition={{ duration: 1 }}
+				className="text-[75px] tracking-[20px] mt-8 font-bold text-white"
+			>
 				AHAMENES
-			</div>
-			<div className="text-2xl tracking-[20px] text-red-500 font-bold mb-5">
+			</motion.div>
+			<motion.div
+				initial={{ opacity: "0%" }}
+				animate={{ opacity: "100%" }}
+				transition={{ duration: 1.5, delay: 2 }}
+				className="text-2xl tracking-[20px] text-red-500 font-bold mb-5"
+			>
 				SPACE CLUB
-			</div>
+			</motion.div>
 			<div className="w-full flex justify-center">
-				<div className="absolute bottom-0 flex gap-4 pl-1">
+				<motion.div
+					initial={{ y: 80 }}
+					animate={{ y: 0 }}
+					transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+					className="absolute bottom-0 flex gap-4 pl-1"
+				>
 					<Image src="/assets/Fire.svg" width={90} height={90} alt="rocket parts" />
 					<Image src="/assets/Fire.svg" width={90} height={90} alt="rocket parts" />
-				</div>
-				<div className="absolute">
+				</motion.div>
+				<motion.div
+					initial={{ y: 80 }}
+					animate={{ y: 0 }}
+					transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+					className="absolute"
+				>
 					<Image
 						src="/assets/Rocket.svg"
 						width={200}
 						height={200}
 						alt="rocket parts"
 					/>
-				</div>
-				<div className="absolute bottom-0 flex gap-20">
+				</motion.div>
+				<motion.div
+					initial={{ opacity: "0%" }}
+					animate={{ opacity: "100%" }}
+					transition={{ duration: 1, delay: 1.5 }}
+					className="absolute bottom-0 flex gap-20"
+				>
 					<Image
 						src="/assets/smokeLeft.svg"
 						width={440}
@@ -81,7 +106,7 @@ const RocketSection = () => {
 						height={440}
 						alt="rocket parts"
 					/>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
